@@ -1,0 +1,87 @@
+.instagram-glow-circle {
+        /* (Mantenha as propriedades existentes: width, height, background-color, box-shadow, border-radius, etc) */
+        /* ADICIONE ISTO PARA CENTRALIZAR O ÍCONE */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* ADICIONE ISTO PARA O ÍCONE FICAR BRANCO E GRANDE */
+        color: white;
+        font-size: 20px;
+        /* Ajuste o tamanho do ícone aqui */
+    }
+
+    .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+        /* Velocidade que botão wpp aparece e some */
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .whatsapp-float.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .whatsapp-float img {
+        width: 110%;
+        height: 110%;
+        object-fit: contain;
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+    }
+
+    .social-icon {
+        transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+        background-color: #00FF41;
+        color: #0A192F;
+        box-shadow: 0 0 15px #00FF41, 0 0 30px rgba(0, 255, 65, 0.5);
+        transform: translateY(-3px);
+    }
+
+    .glass-card {
+        background: rgba(17, 34, 64, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 255, 65, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+        border-color: #00FF41;
+        transform: translateY(-5px);
+    }
+
+    .electric-glow:hover {
+        box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+    }
+
+    .logo img {
+        width: 75px;
+        ;
+        padding: 0;
+        ;
+        margin: 0;
+    }
+
+    header {
+        padding: 00px;
+    }
+
+    .virar {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }

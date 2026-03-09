@@ -1,0 +1,403 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGUNE | Mobilidade Elétrica Inteligente</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="scripts/config.js"></script>
+<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+
+
+<body class="bg-navy text-white font-sans overflow-x-hidden">
+    <header class="fixed w-full z-50 bg-navy/90 backdrop-blur-md border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="virar">
+                <div class="logo"><img src="imagens/imagem.png" alt=""></div>
+                <div class="text-3xl font-extrabold tracking-tighter">
+                    AGUNE<span class="text-electric">.</span>
+                </div>
+            </div>
+
+            <ul class="hidden md:flex space-x-8 font-medium uppercase text-sm tracking-widest">
+                <li><a href="#home" class="hover:text-electric transition">Início</a></li>
+                <li><a href="#sobre" class="hover:text-electric transition">Sobre</a></li>
+                <li><a href="#servicos" class="hover:text-electric transition">Serviços</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleModal()" class="px-5 py-2 border border-electric text-electric rounded-full hover:bg-electric hover:text-navy transition">Orçamento</a></li>
+            </ul>
+
+            <div class="md:hidden text-electric text-2xl cursor-pointer" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <div id="mobile-menu"
+            class="hidden fixed top-[72px] left-0 w-full bg-navy/95 border-b border-white/10 p-6 md:hidden">
+            <ul class="flex flex-col space-y-4 font-medium uppercase text-sm tracking-widest text-center">
+                <li><a href="#home" class="block py-2 hover:text-electric" onclick="toggleMenu()">Início</a></li>
+                <li><a href="#sobre" class="block py-2 hover:text-electric" onclick="toggleMenu()">Sobre</a></li>
+                <li><a href="#servicos" class="block py-2 hover:text-electric" onclick="toggleMenu()">Serviços</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleModal()" class="px-5 py-2 border border-electric text-electric rounded-full hover:bg-electric hover:text-navy transition">Orçamento</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+
+        <video id="video-bg" autoplay muted loop playsinline
+            class="absolute w-full h-full object-cover top-0 left-0 -z-10">
+            <source src="videos/video.mp4" type="video/mp4">
+        </video>
+
+        <div class="absolute inset-0 bg-navy/80 -z-10"></div>
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <span class="text-electric font-semibold tracking-widest uppercase mb-4 block italic">O Futuro é
+                    Elétrico</span>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    Energia que move o <span class="text-electric">amanhã.</span>
+                </h1>
+
+                <p class="text-gray-400 text-lg mb-8 max-w-lg">
+
+                    Infraestrutura completa para recarga de veículos elétricos. Tecnologia, segurança e sustentabilidade
+
+                    para sua residência ou empresa.
+
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+
+                    <a href="javascript:void(0)" onclick="toggleModal()" class="bg-electric text-navy px-8 py-4 rounded-lg font-bold uppercase tracking-wider electric-glow transition">Solicitar Orçamento</a>
+
+                    <a href="#servicos"
+                        class="border border-white/20 hover:border-electric px-8 py-4 rounded-lg font-bold uppercase tracking-wider transition">Ver
+
+                        Serviços</a>
+
+                </div>
+
+            </div>
+
+            <div class="relative hidden md:block" data-aos="zoom-in">
+
+                <div class="absolute -inset-4 bg-electric/20 blur-3xl rounded-full"></div>
+
+                <img src="imagens/EMPR.png" alt="Carro Elétrico"
+                    class="relative rounded-2xl shadow-2xl border border-white/10">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="sobre" class="py-24 bg-navyLight">
+
+        <div class="container mx-auto px-6">
+
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+
+                <div class="w-full md:w-1/2" data-aos="fade-up">
+
+                    <h2 class="text-4xl font-bold mb-6 italic">Especialistas em <br><span
+                            class="text-electric">Infraestrutura de Recarga</span></h2>
+
+                    <p class="text-gray-400 leading-relaxed mb-6">
+
+                        A AGUNE nasceu para acelerar a transição energética no Brasil. Somos focados em entregar
+
+                        soluções de ponta para a nova era da mobilidade, unindo engenharia de precisão e um compromisso
+
+                        inabalável com a segurança.
+
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6">
+
+                        <div>
+
+                            <h4 class="text-electric font-bold text-2xl">100%</h4>
+
+                            <p class="text-sm text-gray-500 uppercase">Segurança Certificada</p>
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="text-electric font-bold text-2xl">24/7</h4>
+
+                            <p class="text-sm text-gray-500 uppercase">Suporte Técnico</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="w-full md:w-1/2 grid grid-cols-2 gap-4" data-aos="fade-left">
+
+                    <div class="bg-navy p-8 rounded-xl border-l-4 border-electric">
+
+                        <i class="fas fa-shield-alt text-electric text-3xl mb-4"></i>
+
+                        <h3 class="font-bold">Segurança</h3>
+
+                    </div>
+
+                    <div class="bg-navy p-8 rounded-xl mt-8 border-l-4 border-electric">
+
+                        <i class="fas fa-microchip text-electric text-3xl mb-4"></i>
+
+                        <h3 class="font-bold">Inovação</h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="servicos" class="py-24">
+
+        <div class="container mx-auto px-6 text-center mb-16">
+
+            <h2 class="text-4xl font-bold italic" data-aos="fade-down">O Que Fazemos</h2>
+
+            <div class="w-20 h-1 bg-electric mx-auto mt-4"></div>
+
+        </div>
+
+
+
+        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8">
+
+            <div class="glass-card p-8 rounded-2xl text-center" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="w-16 h-16 bg-electric/10 rounded-full flex items-center justify-center mx-auto mb-6">
+
+                    <i class="fas fa-home text-electric text-2xl"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mb-4">Instalação Residencial</h3>
+
+                <p class="text-gray-400 text-sm">Instalamos seu Wallbox com rapidez e adequação total às normas
+
+                    técnicas.</p>
+
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl text-center" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="w-16 h-16 bg-electric/10 rounded-full flex items-center justify-center mx-auto mb-6">
+
+                    <i class="fas fa-building text-electric text-2xl"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mb-4">Condomínios & Empresas</h3>
+
+                <p class="text-gray-400 text-sm">Gestão de recarga coletiva com rateio inteligente de energia.</p>
+
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl text-center" data-aos="fade-up" data-aos-delay="300">
+
+                <div class="w-16 h-16 bg-electric/10 rounded-full flex items-center justify-center mx-auto mb-6">
+
+                    <i class="fas fa-tools text-electric text-2xl"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mb-4">Manutenção</h3>
+
+                <p class="text-gray-400 text-sm">Planos preventivos e corretivos para garantir que você nunca fique
+
+                    parado.</p>
+
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl text-center" data-aos="fade-up" data-aos-delay="400">
+
+                <div class="w-16 h-16 bg-electric/10 rounded-full flex items-center justify-center mx-auto mb-6">
+
+                    <i class="fas fa-chart-line text-electric text-2xl"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mb-4">Consultoria Técnica</h3>
+
+                <p class="text-gray-400 text-sm">Análise de viabilidade elétrica e aumento de carga com laudo técnico.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="py-24 bg-electric text-navy">
+
+        <div class="container mx-auto px-6">
+
+            <div class="grid md:grid-cols-3 gap-12 items-center">
+
+                <div class="text-3xl font-extrabold italic" data-aos="fade-right">
+
+                    Por que escolher a AGUNE?
+
+                </div>
+
+                <div class="flex items-start gap-4" data-aos="fade-up">
+
+                    <span class="text-4xl font-bold">01.</span>
+
+                    <p class="font-medium">Certificações internacionais e conformidade com a NBR 5410.</p>
+
+                </div>
+
+                <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="100">
+
+                    <span class="text-4xl font-bold">02.</span>
+
+                    <p class="font-medium">Equipe técnica própria e altamente especializada.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <footer id="contato" class="pt-20 pb-10 bg-navy border-t border-white/5">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 mb-16">
+            <div>
+                <div class="text-3xl font-extrabold mb-6">AGUNE<span class="text-electric">.</span></div>
+                <p class="text-gray-400">Transformando a forma como o Brasil se move, um carregador por vez.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-widest text-sm">Contatos</h4>
+                <ul class="text-gray-400 space-y-3">
+                    <li><i class="fas fa-phone text-electric mr-2"></i> (11) 9999-9999</li>
+                    <li><i class="fas fa-envelope text-electric mr-2"></i> contato@agune.com.br</li>
+                    <li><i class="fas fa-map-marker-alt text-electric mr-2"></i> São Paulo, SP</li>
+                </ul>
+            </div>
+            <div>
+
+                <h4 class="font-bold mb-6 uppercase tracking-widest text-sm">Redes Sociais</h4>
+
+                <div class="flex space-x-4">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/agune.eng/" target="_blank"
+                        class="social-icon w-10 h-10 rounded-full bg-navyLight flex items-center justify-center transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="#" target="_blank"
+                        class="social-icon w-10 h-10 rounded-full bg-navyLight flex items-center justify-center transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/551197738240" target="_blank"
+                        class="social-icon w-10 h-10 rounded-full bg-navyLight flex items-center justify-center transition">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 text-center text-gray-500 text-sm border-t border-white/5 pt-10">
+            &copy; 2026 AGUNE Mobilidade Elétrica. Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+   
+
+    <a href="https://wa.me/5511977382430" class="whatsapp-float" target="_blank">
+        <img src="imagens/wpp.png" alt="WhatsApp">
+
+    </a>
+
+<div id="modalOrcamento" class="fixed inset-0 z-[100] hidden items-center justify-center bg-navy/90 backdrop-blur-sm p-4">
+    <div class="glass-card w-full max-w-lg p-8 rounded-2xl relative shadow-2xl border border-electric/30 bg-navy">
+        <button onclick="toggleModal()" class="absolute top-4 right-4 text-gray-400 hover:text-electric transition text-2xl">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <h2 class="text-2xl font-bold mb-6 italic text-white">SOLICITAR <span class="text-electric">ORÇAMENTO</span></h2>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+            <input type="hidden" name="access_key" value="7a2a0291-ae51-4005-b63f-562b11a9c349">
+            <input type="hidden" name="subject" value="Novo Orçamento Recebido - Site AGUNE">
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-gray-400 mb-1">Nome</label>
+                    <input type="text" name="nome" class="w-full bg-navy border border-white/10 rounded-lg px-4 py-2 text-white focus:border-electric outline-none transition" placeholder="Seu nome">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-gray-400 mb-1">Telefone/WhatsApp</label>
+                    <input type="tel" name="whatsapp" class="w-full bg-navy border border-white/10 rounded-lg px-4 py-2 text-white focus:border-electric outline-none transition" placeholder="(00) 00000-0000">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs uppercase tracking-widest text-gray-400 mb-1">E-mail</label>
+                <input type="email" name="email" class="w-full bg-navy border border-white/10 rounded-lg px-4 py-2 text-white focus:border-electric outline-none transition" placeholder="email@exemplo.com">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-gray-400 mb-1">Cidade/UF</label>
+                    <input type="text" name="cidade" class="w-full bg-navy border border-white/10 rounded-lg px-4 py-2 text-white focus:border-electric outline-none transition" placeholder="Ex: São Paulo - SP">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-gray-400 mb-1">Tipo de Serviço</label>
+                    <select name="servico" class="w-full bg-navy border border-white/10 rounded-lg px-4 py-2 text-gray-400 focus:border-electric outline-none transition appearance-none cursor-pointer">
+                        <option value="" disabled selected>Selecione o serviço</option>
+                        <option value="instalacao">Instalação</option>
+                        <option value="manutencao">Manutenção</option>
+                        <option value="consultoria">Consultoria</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs uppercase tracking-widest text-gray-400 mb-1">Observações / Detalhes</label>
+                <textarea name="mensagem" rows="3" class="w-full bg-navy border border-white/10 rounded-lg px-4 py-2 text-white focus:border-electric outline-none transition" placeholder="Descreva sua necessidade..."></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-electric text-navy font-bold py-3 rounded-lg hover:shadow-[0_0_20px_rgba(0,255,65,0.4)] transition uppercase tracking-widest">
+                Enviar Solicitação
+            </button>
+        </form>
+    </div>
+</div>
+ <script src="scripts/scripts.js"></script>
+</body>
+
+
+</html>
